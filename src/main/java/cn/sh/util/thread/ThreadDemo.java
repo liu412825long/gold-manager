@@ -1,13 +1,31 @@
 package cn.sh.util.thread;
 
+import java.io.UnsupportedEncodingException;
+
 import cn.sh.util.thread.MyRunnable;;
 public class ThreadDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		test1();
-		test2();
+//		test2();
 //		test3();
+		test4();
+	}
+	
+	/**
+	 * 
+	 */
+	private static void test4() {
+		int a=12; //1100
+		int b=-12; //11111111111111111111111111110100
+		int c=a>>1;
+		int d=b>>1;// 11111111111111111111111111111010
+		int e=b>>>1;//01111111111111111111111111111010
+		System.out.println(Integer.toBinaryString(a));
+		System.out.println(c+">>"+Integer.toBinaryString(c));
+		System.out.println(d+">>"+Integer.toBinaryString(d));
+		System.out.println(e+">>"+Integer.toBinaryString(e));
 	}
 	
 	private static void test3() {
